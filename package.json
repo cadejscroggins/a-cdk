@@ -1,21 +1,12 @@
 {
+  "version": "0.1.1",
   "name": "a-cdk",
   "description": "A serverless AWS CDK starter nobody asked for.",
-  "version": "0.1.0",
+  "author": "Cade Scroggins <git@cade.me> (https://cade.me)",
   "license": "MIT",
-  "homepage": "https://github.com/cadejscroggins/a-cdk#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cadejscroggins/a-cdk.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cadejscroggins/a-cdk/issues"
-  },
+  "homepage": "https://github.com/cadejscroggins/a-cdk",
   "bin": {
     "a-cdk": "bin/a-cdk.js"
-  },
-  "directories": {
-    "lib": "lib"
   },
   "dependencies": {
     "@aws-cdk/assets": "^1.72.0",
