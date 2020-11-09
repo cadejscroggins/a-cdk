@@ -1,3 +1,3 @@
 # a-cdk
 
-> A serverless AWS CDK starter nobody asked for.
+> A serverless AWS CDK starter.
