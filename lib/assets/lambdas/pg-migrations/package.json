@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "pg": "^8.5.1",
+    "postgrator": "^4.1.1"
+  },
+  "peerDependencies": {
+    "aws-sdk": "^2"
+  }
+}
