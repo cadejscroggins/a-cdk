@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "pg-migrations",
   "dependencies": {
     "pg": "^8.5.1",
     "postgrator": "^4.1.1"
