@@ -7,8 +7,8 @@
     "a-cdk": "bin/a-cdk.js"
   },
   "dependencies": {
+    "@bbitgmbh/bbit.rdsdata.postgres": "^0.12.0",
     "change-case": "^4.1.1",
-    "pg": "^8.5.1",
     "tmp": "^0.2.1",
     "umzug": "^3.0.0-beta.9",
     "webpack": "^5.6.0"
