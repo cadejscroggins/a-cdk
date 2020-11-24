@@ -83,7 +83,7 @@ aws sesv2 put-account-details \
 
 ## TODO Notes
 
-- Automatically handle Postgres migrations.
+- Automatically handle Postgres migrations w/ aws sdk rds.
 - Seed postgres tables.
 - Automatically handle Dynamodb seeds.
 - Transpile lambdas (via aws-lambda-nodejs?).
