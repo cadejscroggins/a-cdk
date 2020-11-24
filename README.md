@@ -79,7 +79,8 @@ aws sesv2 put-account-details \
 - How do you plan to build or acquire your mailing list?
 - How do you plan to handle bounces and complaints?
 - How can recipients opt out of receiving email from you?
-- How did you choose the sending rate or sending quota that you specified in this request?
+- How did you choose the sending rate or sending quota that you specified in
+  this request?
 
 ## TODO Notes
 
