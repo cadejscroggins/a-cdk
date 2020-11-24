@@ -90,3 +90,4 @@ aws sesv2 put-account-details \
 - Transpile lambdas (via aws-lambda-nodejs?).
 - Automatically configure email templates (cognito/generic).
 - [Generate TXT emails from HTML](https://www.npmjs.com/package/html-to-text).
+- Fix logical ids.
