@@ -84,6 +84,4 @@ aws sesv2 put-account-details \
 
 ## TODO Notes
 
-- Automatically handle Postgres migrations w/
-  https://github.com/jeremydaly/data-api-client.
 - Automatically seed postgres tables.
