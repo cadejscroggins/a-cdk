@@ -84,10 +84,6 @@ aws sesv2 put-account-details \
 
 ## TODO Notes
 
-- Automatically handle Postgres migrations w/ aws sdk rds.
-- Seed postgres tables.
-- Automatically handle Dynamodb seeds.
-- Transpile lambdas (via aws-lambda-nodejs?).
-- Automatically configure email templates (cognito/generic).
-- [Generate TXT emails from HTML](https://www.npmjs.com/package/html-to-text).
-- Fix logical ids.
+- Automatically handle Postgres migrations w/
+  https://github.com/jeremydaly/data-api-client.
+- Automatically seed postgres tables.
