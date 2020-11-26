@@ -6,6 +6,12 @@
   "bin": {
     "a-cdk": "bin/a-cdk.js"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "bin/a-cdk.js",
+    "lib/**/*"
+  ],
   "scripts": {
     "format": "prettier --ignore-path .gitignore --write \"**/*.{js,json,graphql,md}\"",
     "lint": "eslint --ignore-path .gitignore \"**/*.js\""
