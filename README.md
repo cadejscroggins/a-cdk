@@ -45,10 +45,10 @@ aws ses set-identity-mail-from-domain \
   --mail-from-domain mail.example.com
 ```
 
-| Name             | Type | Value                                 |
-| ---------------- | ---- | ------------------------------------- |
-| mail.example.com | MX   | 10 feedback-smtp.region.amazonses.com |
-| mail.example.com | TXT  | v=spf1 include:amazonses.com ~all     |
+| Name             | Type | Value                                    |
+| ---------------- | ---- | ---------------------------------------- |
+| mail.example.com | MX   | 10 feedback-smtp.us-west-2.amazonses.com |
+| mail.example.com | TXT  | v=spf1 include:amazonses.com ~all        |
 
 #### Set up DKIM
 
@@ -81,8 +81,3 @@ aws sesv2 put-account-details \
 - How can recipients opt out of receiving email from you?
 - How did you choose the sending rate or sending quota that you specified in
   this request?
-
-## TODO Notes
-
-- Create ses email templates from folder.
-- Automatically seed postgres tables.
