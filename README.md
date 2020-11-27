@@ -84,4 +84,5 @@ aws sesv2 put-account-details \
 
 ## TODO Notes
 
+- Create ses email templates from folder.
 - Automatically seed postgres tables.
