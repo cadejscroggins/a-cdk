@@ -10,13 +10,13 @@ const ACdkStack = require('../lib/stacks/a-cdk.js');
 const formatResourceId = require('../lib/utilities/format-resource-id');
 
 const env = process.env.ENV;
-const defaultContextFile = path.join(process.cwd(), `cdk.context.default.json`);
+const allContextFile = path.join(process.cwd(), `cdk.context.all.json`);
 const envContextFile = path.join(process.cwd(), `cdk.context.${env}.json`);
 
 const app = new cdk.App({
   context: deepmerge(
-    fs.existsSync(defaultContextFile)
-      ? JSON.parse(fs.readFileSync(defaultContextFile, 'utf8'))
+    fs.existsSync(allContextFile)
+      ? JSON.parse(fs.readFileSync(allContextFile, 'utf8'))
       : {},
     fs.existsSync(envContextFile)
       ? JSON.parse(fs.readFileSync(envContextFile, 'utf8'))
