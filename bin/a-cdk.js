@@ -12,11 +12,11 @@ const formatResourceId = require('../lib/utilities/format-resource-id');
 const env = process.env.ENV;
 const contextFile = path.join(process.cwd(), `cdk.context.json`);
 const envContextFile = path.join(process.cwd(), `cdk.context.${env}.json`);
-let context;
+let context = JSON.parse(fs.readFileSync(contextFile, 'utf8'));
 
 if (fs.existsSync(envContextFile)) {
   context = deepmerge(
-    JSON.parse(fs.readFileSync(contextFile, 'utf8')),
+    context,
     JSON.parse(fs.readFileSync(envContextFile, 'utf8'))
   );
 }
