@@ -9,27 +9,28 @@ const path = require('path');
 const ACdkStack = require('../lib/stacks/a-cdk.js');
 const formatResourceId = require('../lib/utilities/format-resource-id');
 
-const app = new cdk.App();
-const env = app.node.tryGetContext('env');
-const namespace = app.node.tryGetContext('namespace');
+const env = process.env.ENV;
+const contextFile = path.join(process.cwd(), `cdk.context.json`);
 const envContextFile = path.join(process.cwd(), `cdk.context.${env}.json`);
+let context;
 
 if (fs.existsSync(envContextFile)) {
-  Object.entries(
-    fs.readFileSync(envContextFile).toJSON()
-  ).forEach(([key, value]) =>
-    app.node.setContext(key, deepmerge(app.node.tryGetContext(key), value))
+  context = deepmerge(
+    JSON.parse(fs.readFileSync(contextFile, 'utf8')),
+    JSON.parse(fs.readFileSync(envContextFile, 'utf8'))
   );
 }
 
+const app = new cdk.App({ context });
+
 if (!env) {
-  console.error('Please specify an environment! (via "env" context)');
+  console.error('Please specify an env! (via "ENV" environment variable)');
   process.exit(1);
 }
 
-if (!namespace) {
+if (!context.namespace) {
   console.error('Please specify a namespace! (via "namespace" context)');
   process.exit(1);
 }
 
-new ACdkStack(app, formatResourceId(namespace, env));
+new ACdkStack(app, formatResourceId(context.namespace, env));
