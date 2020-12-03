@@ -81,3 +81,7 @@ aws sesv2 put-account-details \
 - How can recipients opt out of receiving email from you?
 - How did you choose the sending rate or sending quota that you specified in
   this request?
+
+## TODO
+
+- [Switch to Aurora V2 before using postgres](https://aws.amazon.com/rds/aurora/serverless/)
