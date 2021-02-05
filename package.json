@@ -66,5 +66,8 @@
     "a-conf": "^0.1.13",
     "eslint": "^7.19.0",
     "prettier": "^2.2.1"
+  },
+  "peerDependencies": {
+    "aws-cdk": "^1.88.0"
   }
 }
